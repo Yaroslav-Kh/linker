@@ -1,0 +1,17 @@
+
+body {
+    background: #f7f7f7;
+    font-family: monospace;
+}
+
+.form-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.required label::after {
+    content: ' *';
+    color: red;
+}
