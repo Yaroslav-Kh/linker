@@ -30,7 +30,7 @@ class FormService implements FormServiceInterface
                     'job_id'        => 0,
                 ]);
 
-                $job_id = Queue::later(Carbon::now()->addMinutes($DTO->lifetime), new LifetimeJob($entity));
+                $job_id = Queue::later(Carbon::now()->addHours($DTO->lifetime), new LifetimeJob($entity));
                 $entity->update(['job_id' => $job_id]);
 
             });
